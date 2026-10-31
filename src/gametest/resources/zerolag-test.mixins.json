@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.yigit.zerolag.test.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"MinecraftAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

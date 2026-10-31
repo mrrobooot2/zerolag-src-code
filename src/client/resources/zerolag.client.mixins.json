@@ -1,0 +1,23 @@
+{
+	"required": true,
+	"package": "com.yigit.zerolag.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"DeltaTrackerTimerAccessor",
+		"GlCommandEncoderMixin",
+		"GlSurfaceMixin",
+		"KeyboardInputMixin",
+		"KeyMappingMixin",
+		"MinecraftMixin",
+		"ReentrantBlockableEventLoopAccessor",
+		"SDLEventHandlerMixin",
+		"VulkanCommandEncoderMixin",
+		"VulkanGpuSurfaceMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

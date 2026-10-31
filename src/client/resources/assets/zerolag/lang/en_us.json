@@ -1,0 +1,60 @@
+{
+	"key.category.zerolag.main": "ZeroLag",
+	"key.zerolag.settings": "Open ZeroLag settings",
+	"key.zerolag.toggle": "Toggle ZeroLag",
+
+	"zerolag.title": "ZeroLag",
+	"zerolag.toggled.on": "ZeroLag: ON",
+	"zerolag.toggled.off": "ZeroLag: OFF",
+
+	"zerolag.header.frame": "Frame pacing",
+	"zerolag.header.input": "Input",
+	"zerolag.header.status": "Live status",
+
+	"zerolag.option.enabled": "ZeroLag",
+	"zerolag.option.enabled.tooltip": "Master switch. Turn it off to compare against vanilla.",
+
+	"zerolag.option.frame_pacing": "Frame Pacing",
+	"zerolag.option.frame_pacing.off": "Vanilla",
+	"zerolag.option.frame_pacing.off.tooltip": "The CPU may run up to two frames ahead of the GPU, so what you see can be two frames older than your input.",
+	"zerolag.option.frame_pacing.smart": "Smart",
+	"zerolag.option.frame_pacing.smart.tooltip": "Measures how long each frame waits for the GPU and the display, and spends that time asleep before input is read instead. Input is read just in time, with almost no FPS loss.",
+	"zerolag.option.frame_pacing.strict": "Strict",
+	"zerolag.option.frame_pacing.strict.tooltip": "Waits for the GPU to finish every frame before starting the next one, so no frame is ever queued. Without VSync this gives the lowest latency, but FPS can drop noticeably. With VSync, Smart works better.",
+
+	"zerolag.option.vsync_mode": "VSync Mode",
+	"zerolag.option.vsync_mode.vanilla": "Vanilla",
+	"zerolag.option.vsync_mode.vanilla.tooltip": "Mojang's default: three swapchain images when VSync is on.",
+	"zerolag.option.vsync_mode.low_latency": "Low Latency",
+	"zerolag.option.vsync_mode.low_latency.tooltip": "With VSync on, uses two swapchain images instead of three: about one refresh less delay. If the GPU can't keep up, FPS drops to half the refresh rate. Vulkan only.",
+	"zerolag.option.vsync_mode.mailbox": "Mailbox",
+	"zerolag.option.vsync_mode.mailbox.tooltip": "With VSync on, shows the newest finished frame at every refresh: no tearing and the lowest VSync latency, but the GPU also draws frames that are never shown. Vulkan only; falls back to Low Latency if the driver lacks it.",
+
+	"zerolag.option.late_input": "Late Input",
+	"zerolag.option.late_input.tooltip": "Reads the mouse and keyboard once more right before the camera is placed, after the ticks and any wait for the swapchain.",
+	"zerolag.option.tap_buffer": "Catch Quick Taps",
+	"zerolag.option.tap_buffer.tooltip": "A movement, jump or sneak press shorter than one tick (50 ms) is normally lost. This keeps it for the next tick.",
+
+	"zerolag.option.instant_actions": "Instant Actions",
+	"zerolag.option.instant_actions.off": "Off",
+	"zerolag.option.instant_actions.off.tooltip": "Every press waits for the next 20 TPS tick, up to 50 ms.",
+	"zerolag.option.instant_actions.safe": "Safe",
+	"zerolag.option.instant_actions.safe.tooltip": "Hotbar, inventory, drop, swap hands and camera keys act on the frame you press them. Attack and use still wait for the tick.",
+	"zerolag.option.instant_actions.full": "Full",
+	"zerolag.option.instant_actions.full.tooltip": "Attack, use and pick block also act on the frame of the click, aimed at what that frame shows. Held mining and repeated placing still run once per tick, so nothing gets faster than vanilla.",
+
+	"zerolag.option.instant_combat_on_servers": "Instant Combat on Servers",
+	"zerolag.option.instant_combat_on_servers.tooltip": "Lets Full mode attack and use instantly on multiplayer servers too. No packets are added or reordered, but a hit that lands between ticks can look unusual to some anti-cheats. When off, servers use Safe.",
+
+	"zerolag.status.surface": "%s · %s",
+	"zerolag.status.surface.images": "%s · %s · %s images",
+	"zerolag.status.present.immediate": "No VSync (Immediate)",
+	"zerolag.status.present.mailbox": "Mailbox",
+	"zerolag.status.present.fifo": "VSync (FIFO)",
+	"zerolag.status.present.fifo_relaxed": "Adaptive VSync",
+	"zerolag.status.input_age": "Input to present: %s ms",
+	"zerolag.status.pacing": "Sleep before input: %s ms · GPU wait: %s ms",
+	"zerolag.status.disabled": "ZeroLag is off (vanilla timing)",
+
+	"modmenu.descriptionTranslation.zerolag": "Ultra input lag reducer. Paces frames so input is read just before the GPU needs it, acts on key presses on the frame they happen, and never drops a tap that is shorter than a tick."
+}

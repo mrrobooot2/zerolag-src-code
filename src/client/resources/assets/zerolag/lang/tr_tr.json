@@ -1,0 +1,60 @@
+{
+	"key.category.zerolag.main": "ZeroLag",
+	"key.zerolag.settings": "ZeroLag ayarlarını aç",
+	"key.zerolag.toggle": "ZeroLag'i aç/kapat",
+
+	"zerolag.title": "ZeroLag",
+	"zerolag.toggled.on": "ZeroLag: AÇIK",
+	"zerolag.toggled.off": "ZeroLag: KAPALI",
+
+	"zerolag.header.frame": "Kare zamanlaması",
+	"zerolag.header.input": "Girdi",
+	"zerolag.header.status": "Canlı durum",
+
+	"zerolag.option.enabled": "ZeroLag",
+	"zerolag.option.enabled.tooltip": "Ana anahtar. Vanilla ile karşılaştırmak için kapat.",
+
+	"zerolag.option.frame_pacing": "Kare Zamanlaması",
+	"zerolag.option.frame_pacing.off": "Vanilla",
+	"zerolag.option.frame_pacing.off.tooltip": "CPU, GPU'nun iki kare önüne geçebilir; ekranda gördüğün şey girdinden iki kare eski olabilir.",
+	"zerolag.option.frame_pacing.smart": "Akıllı",
+	"zerolag.option.frame_pacing.smart.tooltip": "Her karenin GPU'yu ve ekranı ne kadar beklediğini ölçer, bu süreyi girdi okunmadan önce uyuyarak geçirir. Girdi tam zamanında okunur, FPS neredeyse hiç düşmez.",
+	"zerolag.option.frame_pacing.strict": "Katı",
+	"zerolag.option.frame_pacing.strict.tooltip": "Her karede GPU'nun işini bitirmesini bekler, sonra yeni kareye başlar; hiçbir kare kuyruğa girmez. VSync kapalıyken en düşük gecikme budur, ama FPS belirgin şekilde düşebilir. VSync açıkken Akıllı mod daha iyidir.",
+
+	"zerolag.option.vsync_mode": "VSync Modu",
+	"zerolag.option.vsync_mode.vanilla": "Vanilla",
+	"zerolag.option.vsync_mode.vanilla.tooltip": "Mojang varsayılanı: VSync açıkken üç swapchain görüntüsü.",
+	"zerolag.option.vsync_mode.low_latency": "Düşük Gecikme",
+	"zerolag.option.vsync_mode.low_latency.tooltip": "VSync açıkken üç yerine iki swapchain görüntüsü kullanır: yaklaşık bir yenileme süresi daha az gecikme. GPU yetişemezse FPS yenileme hızının yarısına düşer. Yalnızca Vulkan.",
+	"zerolag.option.vsync_mode.mailbox": "Mailbox",
+	"zerolag.option.vsync_mode.mailbox.tooltip": "VSync açıkken her yenilemede biten en yeni kareyi gösterir: yırtılma yok, VSync gecikmesi en düşük; ama GPU hiç gösterilmeyen kareleri de çizer. Yalnızca Vulkan; sürücü desteklemiyorsa Düşük Gecikme kullanılır.",
+
+	"zerolag.option.late_input": "Geç Girdi Okuma",
+	"zerolag.option.late_input.tooltip": "Fareyi ve klavyeyi, kamera yerleştirilmeden hemen önce, tick'lerden ve swapchain beklemesinden sonra bir kez daha okur.",
+	"zerolag.option.tap_buffer": "Kısa Basışları Yakala",
+	"zerolag.option.tap_buffer.tooltip": "Bir tick'ten (50 ms) kısa süren hareket, zıplama ya da eğilme basışı normalde kaybolur. Bu ayar onu bir sonraki tick'e taşır.",
+
+	"zerolag.option.instant_actions": "Anında Aksiyon",
+	"zerolag.option.instant_actions.off": "Kapalı",
+	"zerolag.option.instant_actions.off.tooltip": "Her basış bir sonraki 20 TPS tick'ini bekler, 50 ms'ye kadar.",
+	"zerolag.option.instant_actions.safe": "Güvenli",
+	"zerolag.option.instant_actions.safe.tooltip": "Hotbar, envanter, eşya atma, el değiştirme ve kamera tuşları bastığın karede çalışır. Saldırı ve kullanma yine tick'i bekler.",
+	"zerolag.option.instant_actions.full": "Tam",
+	"zerolag.option.instant_actions.full.tooltip": "Saldırı, kullanma ve blok seçme de tıkladığın karede, o karede gördüğün hedefe uygulanır. Basılı tutarak kazma ve art arda koyma yine tick başına bir kez çalışır; hiçbir şey vanilladan hızlı olmaz.",
+
+	"zerolag.option.instant_combat_on_servers": "Sunucularda Anında Saldırı",
+	"zerolag.option.instant_combat_on_servers.tooltip": "Tam modun saldırı ve kullanmayı çok oyunculu sunucularda da anında yapmasına izin verir. Paket eklenmez ya da sırası değişmez, ama tick'ler arasına düşen bir vuruş bazı anti-cheat'lere alışılmadık görünebilir. Kapalıyken sunucularda Güvenli mod kullanılır.",
+
+	"zerolag.status.surface": "%s · %s",
+	"zerolag.status.surface.images": "%s · %s · %s görüntü",
+	"zerolag.status.present.immediate": "VSync yok (Immediate)",
+	"zerolag.status.present.mailbox": "Mailbox",
+	"zerolag.status.present.fifo": "VSync (FIFO)",
+	"zerolag.status.present.fifo_relaxed": "Uyarlanır VSync",
+	"zerolag.status.input_age": "Girdiden sunuma: %s ms",
+	"zerolag.status.pacing": "Girdi öncesi uyku: %s ms · GPU bekleme: %s ms",
+	"zerolag.status.disabled": "ZeroLag kapalı (vanilla zamanlama)",
+
+	"modmenu.descriptionTranslation.zerolag": "Ultra input lag azaltıcı. Kareleri, girdi GPU'ya tam ihtiyaç duyduğu anda okunacak şekilde zamanlar; tuş basışlarını oldukları karede işler ve bir tick'ten kısa basışları asla kaybetmez."
+}

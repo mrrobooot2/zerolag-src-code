@@ -1,0 +1,18 @@
+{
+	"schemaVersion": 1,
+	"id": "zerolag-test",
+	"version": "1.0.0",
+	"name": "ZeroLag tests",
+	"environment": "client",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"com.yigit.zerolag.test.ZeroLagGameTest"
+		]
+	},
+	"mixins": [
+		"zerolag-test.mixins.json"
+	],
+	"depends": {
+		"zerolag": "*"
+	}
+}

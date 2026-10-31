@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "zerolag",
+	"version": "${version}",
+	"name": "ZeroLag",
+	"description": "Ultra input lag reducer. Paces frames so input is read just before the GPU needs it, acts on key presses on the frame they happen, and never drops a tap that is shorter than a tick.",
+	"authors": [
+		"Yigit"
+	],
+	"license": "MIT",
+	"icon": "assets/zerolag/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.yigit.zerolag.ZeroLagClient"
+		],
+		"modmenu": [
+			"com.yigit.zerolag.compat.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		{
+			"config": "zerolag.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}
